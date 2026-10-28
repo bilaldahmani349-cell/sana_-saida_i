@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عيد ميلاد سعيد يا إيمان ❤️ | سنة سعيدة ومميزة</title>
+  <meta name="description" content="موقع احتفال رومانسي فاخر بمناسبة عيد ميلاد إيمان">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- كانفاس جسيمات القلوب والورود المتطايرة -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- شريط التنقل العلوي -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="logo-badge">❤️</div>
+        <div>
+          <strong class="var-girl-name font-amiri" style="font-size: 1.15rem; color: #fff;">إيمان</strong>
+          <span style="font-size: 0.75rem; color: #fbcfe8; display: block;">سنة سعيدة ومباركة</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#hero">الرئيسية</a></li>
+        <li><a href="#cake-area">كعكة العيد</a></li>
+        <li><a href="#countdown-area">العداد التنازلي</a></li>
+        <li><a href="#gallery-area">معرض الصور</a></li>
+        <li><a href="#cards-area">رسائل الحب</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-open-letter" style="padding: 0.4rem 1rem; font-size: 0.8rem;">
+          💌 رسالتي لكِ
+        </button>
+        <a href="admin.html" class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" title="لوحة التحكم">
+          ⚙️ الإعدادات
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- قسم الاستقبال والترحيب الرئيسي -->
+  <section id="hero" class="hero-section container">
+    <div class="tag-badge">
+      ✨ ليلة استثنائية لأغلى وأرق إنسانة في الكون ✨
+    </div>
+
+    <h1 id="hero-title-text" class="hero-title font-amiri text-gold">
+      عيد ميلاد سعيد يا أغلى إيمان ❤️
+    </h1>
+
+    <div id="hero-nickname-text" class="hero-nickname font-amiri">
+      «حبيبة القلب ونور العين»
+    </div>
+
+    <p id="hero-message-text" class="hero-message font-amiri">
+      في مثل هذا اليوم السعيد، وُلدت أجمل زهرة في بستان الحياة لتملأ الدنيا عطراً وضياءً. كل عام وأنتِ روحي ونبض فؤادي، كل عام وابتسامتكِ تضيء كوني.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#cake-area" class="btn btn-primary">
+        🎂 إطفاء الشموع واصنعي أمنية
+      </a>
+      <button class="btn btn-gold btn-open-letter">
+        💌 قراءة رسالة الحب السرية
+      </button>
+      <button class="btn btn-purple btn-open-surprise">
+        🎁 كشف المفاجأة الخاصة
+      </button>
+    </div>
+  </section>
+
+  <!-- قسم كعكة عيد الميلاد التفاعلية -->
+  <section id="cake-area" class="container">
+    <div class="glass-panel-gold cake-card">
+      <div class="tag-badge-gold tag-badge">
+        ✨ تفاعلي: كعكة العيد
+      </div>
+      <h2 class="font-amiri text-gold" style="font-size: 1.8rem; margin-bottom: 0.5rem;">
+        اطفئي الشموع واصنعي أمنية يا <span class="var-girl-name">إيمان</span>
+      </h2>
+      <p style="font-size: 0.85rem; color: #fbcfe8;">
+        انقري على الشموع لإطفائها واحدة تلو الأخرى، أو اضغطي زر النفخ في الأسفل!
+      </p>
+
+      <div class="cake-wrapper">
+        <!-- مجموعة الشموع -->
+        <div class="candles-group">
+          <div class="candle-unit" title="انقر لإطفاء الشمعة">
+            <div class="flame-holder"><div class="flame"></div></div>
+            <div class="wick"></div>
+            <div class="candle-stick"></div>
+          </div>
+          <div class="candle-unit" title="انقر لإطفاء الشمعة">
+            <div class="flame-holder"><div class="flame"></div></div>
+            <div class="wick"></div>
+            <div class="candle-stick"></div>
+          </div>
+          <div class="candle-unit" title="انقر لإطفاء الشمعة">
+            <div class="flame-holder"><div class="flame"></div></div>
+            <div class="wick"></div>
+            <div class="candle-stick"></div>
+          </div>
+        </div>
+
+        <!-- طبقات الكعكة -->
+        <div class="cake-tier-top">✨ <span class="var-girl-name">إيمان</span> ✨</div>
+        <div class="cake-tier-mid">🍓 💖 🌸 💖 🍓</div>
+        <div class="cake-tier-bot font-amiri">سنة حلوة يا جميل 🎂</div>
+        <div class="cake-platter"></div>
+      </div>
+
+      <!-- رسالة التهنئة بعد إطفاء الشموع -->
+      <div id="cake-celebration-msg" style="display: none; margin-top: 1.5rem; padding: 1rem; border-radius: 1rem; background: rgba(236,72,153,0.25); border: 1px solid rgba(236,72,153,0.5);">
+        <h3 class="font-amiri text-gold" style="font-size: 1.3rem;">🎉 تحققت جميع أمنياتكِ بإذن الله يا <span class="var-girl-name">إيمان</span>! 💖</h3>
+        <p style="font-size: 0.85rem; color: #fff; margin-top: 0.3rem;">جعل الله أيامكِ القادمة كلها سعادة وطمأنينة وتألق.</p>
+      </div>
+
+      <div style="margin-top: 1.5rem;">
+        <button id="blow-all-candles" class="btn btn-primary" style="font-size: 0.85rem;">
+          انفخي الشموع دفعة واحدة 💨
+        </button>
+        <button id="relight-candles" class="btn btn-purple" style="display: none; font-size: 0.85rem;">
+          إشعال الشموع مجددًا 🔥
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم العداد التنازلي -->
+  <section id="countdown-area" class="container">
+    <div class="glass-panel countdown-card">
+      <div class="tag-badge">
+        ⏳ لحظات الانتظار والشوق
+      </div>
+      <h3 class="font-amiri text-gold" style="font-size: 1.6rem;">
+        العداد التنازلي ليوم ميلاد <span class="var-girl-name">إيمان</span>
+      </h3>
+      <p style="font-size: 0.85rem; color: #fbcfe8; margin-top: 0.3rem;">
+        نترقب بلهفة اللحظة التي تكتمل فيها بهجة هذا العام
+      </p>
+
+      <div class="countdown-grid">
+        <div class="countdown-box">
+          <span id="cd-days" class="number text-gold">00</span>
+          <span class="label">يوم</span>
+        </div>
+        <div class="countdown-box">
+          <span id="cd-hours" class="number text-gold">00</span>
+          <span class="label">ساعة</span>
+        </div>
+        <div class="countdown-box">
+          <span id="cd-minutes" class="number text-gold">00</span>
+          <span class="label">دقيقة</span>
+        </div>
+        <div class="countdown-box">
+          <span id="cd-seconds" class="number text-gold">00</span>
+          <span class="label">ثانية</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم رسائل وكلمات التهنئة -->
+  <section id="cards-area" class="container">
+    <div style="text-align: center; margin-top: 2rem;">
+      <div class="tag-badge">💌 همسات من الوجدان</div>
+      <h2 class="font-amiri text-gold" style="font-size: 2.2rem;">رسائل حب وتهنئة خاصة</h2>
+      <p style="color: #fbcfe8; font-size: 0.9rem;">كلمات تفيض بالصدق والود لصاحبة أطيب قلب</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="glass-panel card-item">
+        <span class="tag-badge">نبض الفؤاد</span>
+        <h3 class="font-amiri text-gold" style="font-size: 1.3rem; margin: 0.5rem 0;">سر السعادة</h3>
+        <p class="font-amiri" style="font-size: 1.05rem; color: #fdf2f8;">
+          وجودكِ في حياتي هو المعنى الحقيقي للطمأنينة، أنتِ البهجة التي أتمناها تدوم مدى الدهر.
+        </p>
+      </div>
+
+      <div class="glass-panel card-item">
+        <span class="tag-badge">أمنية العمر</span>
+        <h3 class="font-amiri text-gold" style="font-size: 1.3rem; margin: 0.5rem 0;">عامٌ من التألق</h3>
+        <p class="font-amiri" style="font-size: 1.05rem; color: #fdf2f8;">
+          سنة جديدة تكبرين فيها جمالاً ونضجاً ورفعة، بارك الله في عمركِ وحقق لكِ كل ما تتمنين.
+        </p>
+      </div>
+
+      <div class="glass-panel card-item">
+        <span class="tag-badge">جمال الروح</span>
+        <h3 class="font-amiri text-gold" style="font-size: 1.3rem; margin: 0.5rem 0;">ابتسامة ساحرة</h3>
+        <p class="font-amiri" style="font-size: 1.05rem; color: #fdf2f8;">
+          حين تبتسمين يا <span class="var-girl-name">إيمان</span>، يبتسم العالم بأسره وتتفتح الأزهار في فصول الشتاء.
+        </p>
+      </div>
+
+      <div class="glass-panel card-item">
+        <span class="tag-badge">حب أبدي</span>
+        <h3 class="font-amiri text-gold" style="font-size: 1.3rem; margin: 0.5rem 0;">عهد الوفاء</h3>
+        <p class="font-amiri" style="font-size: 1.05rem; color: #fdf2f8;">
+          مهما طالت المسافات أو مرت السنوات، يبقى مكانكِ في القلب محفوظاً لا يشاركه فيه أحد.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم معرض الصور الرومانسي -->
+  <section id="gallery-area" class="container gallery-section">
+    <div style="text-align: center;">
+      <div class="tag-badge">📸 ألبوم الذكريات والأشواق</div>
+      <h2 class="font-amiri text-gold" style="font-size: 2.2rem;">لحظات لا تُنسى مع <span class="var-girl-name">إيمان</span></h2>
+      <p style="color: #fbcfe8; font-size: 0.9rem;">اضغطي على أي صورة لتكبيرها، ويمكنك إضافة صورك الشخصية عبر لوحة التحكم</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery-container">
+      <div class="glass-panel gallery-card">
+        <div class="gallery-thumb">
+          <img src="assets/images/romantic_cake.jpg" alt="كعكة العيد">
+        </div>
+        <div class="gallery-info">
+          <h4 class="font-amiri">كعكة عيد ميلادك الساحرة</h4>
+          <p>أشعلنا الشموع وصنعنا أمنية لقلبكِ الطاهر</p>
+        </div>
+      </div>
+
+      <div class="glass-panel gallery-card">
+        <div class="gallery-thumb">
+          <img src="assets/images/romantic_roses.jpg" alt="باقة الورد">
+        </div>
+        <div class="gallery-info">
+          <h4 class="font-amiri">باقة ورد تليق بجمالك</h4>
+          <p>كل وردة فيها تنطق برقة حضوركِ</p>
+        </div>
+      </div>
+
+      <div class="glass-panel gallery-card">
+        <div class="gallery-thumb">
+          <img src="assets/images/gift_box.jpg" alt="صندوق الهدية">
+        </div>
+        <div class="gallery-info">
+          <h4 class="font-amiri">هدية معطرة بالحب</h4>
+          <p>أجمل الهدايا هي وجودكِ في هذه الحياة</p>
+        </div>
+      </div>
+
+      <div class="glass-panel gallery-card">
+        <div class="gallery-thumb">
+          <img src="assets/images/starlit_night.jpg" alt="ليلة تحت النجوم">
+        </div>
+        <div class="gallery-info">
+          <h4 class="font-amiri">ليلة احتفال تحت النجوم</h4>
+          <p>السماء تحتفل بقمرها المشرق</p>
+        </div>
+      </div>
+
+      <div class="glass-panel gallery-card">
+        <div class="gallery-thumb">
+          <img src="assets/images/love_envelope.jpg" alt="رسائل الغرام">
+        </div>
+        <div class="gallery-info">
+          <h4 class="font-amiri">رسائل الغرام الصادقة</h4>
+          <p>حروف كُتبت بمداد الروح ومختومة بالوفاء</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم صندوق الأمنيات -->
+  <section class="container">
+    <div class="glass-panel-gold wish-card">
+      <div class="tag-badge-gold tag-badge">✨ أمنيات عيد الميلاد</div>
+      <h3 class="font-amiri text-gold" style="font-size: 1.8rem;">صندوق أمنية لـ <span class="var-girl-name">إيمان</span></h3>
+      <p style="font-size: 0.85rem; color: #fbcfe8;">انقري لسحب أمنية جديدة تملأ قلبكِ بالبهجة</p>
+
+      <div id="wish-display-text" class="wish-display font-amiri">
+        "أتمنى لكِ عاماً مليئاً بالضحكات الصادقة والنجاحات الباهرة."
+      </div>
+
+      <button id="draw-wish-btn" class="btn btn-gold">
+        سحب أمنية جديدة ✨
+      </button>
+    </div>
+  </section>
+
+  <!-- مودال رسالة الحب السرية -->
+  <div id="love-letter-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button id="close-letter-modal" class="modal-close">×</button>
+
+      <!-- مظروف الشمع الأحمر -->
+      <div id="letter-envelope" style="text-align: center;">
+        <div class="wax-envelope">
+          <div class="wax-seal">❤️</div>
+        </div>
+        <h3 class="font-amiri text-gold" style="font-size: 1.5rem; margin-top: 1rem;">
+          رسالة سرية موجهة إلى قلبكِ يا <span class="var-girl-name">إيمان</span>
+        </h3>
+        <p style="color: #fbcfe8; font-size: 0.85rem; margin-top: 0.4rem;">
+          اضغطي على المظروف لفض الختم وقراءة الرسالة
+        </p>
+      </div>
+
+      <!-- نص الرسالة المكشوف -->
+      <div id="unfolded-letter" style="display: none; text-align: right;">
+        <h3 id="letter-title-text" class="font-amiri text-gold" style="font-size: 1.6rem; text-align: center; margin-bottom: 1rem;">
+          رسالة من أعماق القلب إلى إيمان
+        </h3>
+        <div id="letter-body-text" class="font-amiri" style="font-size: 1.1rem; line-height: 1.9; white-space: pre-line; background: rgba(0,0,0,0.3); padding: 1.25rem; border-radius: 1rem; border: 1px solid rgba(244,114,182,0.2);">
+        </div>
+        <div id="letter-signature-text" class="font-amiri" style="margin-top: 1.25rem; color: #fbbf24; font-weight: bold; font-size: 1.15rem; text-align: left;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- مودال المفاجأة الخاصة -->
+  <div id="surprise-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button id="close-surprise-modal" class="modal-close">×</button>
+
+      <!-- صندوق الهدية -->
+      <div id="gift-box-wrapper" style="text-align: center; cursor: pointer;">
+        <div style="font-size: 4.5rem; animation: flameFlicker 1.5s infinite;">🎁</div>
+        <h3 class="font-amiri text-gold" style="font-size: 1.6rem; margin-top: 1rem;">
+          مفاجأة خاصة لصاحبة أجمل قلب
+        </h3>
+        <p style="color: #fbcfe8; font-size: 0.85rem; margin-top: 0.4rem;">
+          اضغطي على الهدية لفتحها وكشف أسرارها
+        </p>
+      </div>
+
+      <!-- محتوى المفاجأة المكشوف -->
+      <div id="surprise-inner-content" style="display: none; text-align: center;">
+        <h3 id="surprise-title-text" class="font-amiri text-gold" style="font-size: 1.6rem; margin-bottom: 0.75rem;">
+          مفاجأة خاصة لصاحبة أجمل قلب 🎁
+        </h3>
+        <p id="surprise-message-text" style="font-size: 1rem; line-height: 1.7; margin-bottom: 1.25rem; color: #fff;">
+        </p>
+        <div style="background: rgba(168,85,247,0.15); border: 1px solid rgba(251,191,36,0.3); border-radius: 1rem; padding: 1.25rem; margin-top: 1rem;">
+          <h4 style="color: #fbbf24; margin-bottom: 0.5rem; font-size: 0.95rem;">أبيات كُتبت لأجلكِ:</h4>
+          <p id="surprise-poem-text" class="font-amiri" style="font-size: 1.15rem; line-height: 1.9; color: #fbcfe8; white-space: pre-line;">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- لايت بوكس معرض الصور -->
+  <div id="gallery-lightbox" class="modal-overlay">
+    <div class="modal-box" style="max-width: 750px; text-align: center;">
+      <button id="close-lightbox" class="modal-close">×</button>
+      <img id="lightbox-img" src="" alt="عرض مكبّر" style="max-width: 100%; max-height: 70vh; border-radius: 1rem; object-fit: contain;">
+      <h4 id="lightbox-caption" class="font-amiri text-gold" style="margin-top: 1rem; font-size: 1.25rem;"></h4>
+    </div>
+  </div>
+
+  <!-- مشغل الموسيقى العائم -->
+  <div class="music-player-bar">
+    <button id="music-toggle-btn" class="player-btn" aria-label="تشغيل الموسيقى">▶️</button>
+    <div>
+      <span id="music-player-title" style="font-size: 0.75rem; font-weight: bold; color: #fbbf24; display: block;">لحن البيانو الرومانسي</span>
+      <span style="font-size: 0.65rem; color: #fbcfe8;">انقر للتشغيل أو الإيقاف</span>
+    </div>
+  </div>
+
+  <!-- التذييل -->
+  <footer class="site-footer">
+    <div class="container">
+      <div style="font-size: 1.15rem; color: #f472b6; font-weight: bold; margin-bottom: 0.5rem;">
+        صُنِع بكل حب ووفاء لأجل «<span class="var-girl-name">إيمان</span>» ❤️
+      </div>
+      <p style="color: #fbcfe8; font-size: 0.85rem; max-width: 500px; margin: 0 auto 1.25rem;">
+        كل عام وأنتِ الحب والسعادة ونور الأيام، دمتِ لي عمراً لا ينتهي.
+      </p>
+      <div>
+        <a href="admin.html" class="btn btn-outline" style="font-size: 0.75rem; padding: 0.35rem 0.9rem;">
+          ⚙️ لوحة التحكم في الموقع (رمز الدخول)
+        </a>
+      </div>
+      <div style="margin-top: 1.25rem; font-size: 0.75rem; color: rgba(255,255,255,0.4);">
+        جاهز تمامًا للنشر على GitHub Pages: bilaldahmani349-cell.github.io/sana-saida-i/
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

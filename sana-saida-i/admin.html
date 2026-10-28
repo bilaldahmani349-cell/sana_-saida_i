@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم | موقع عيد ميلاد إيمان</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- شريط علوي بسيط للوحة التحكم -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="logo-badge">⚙️</div>
+        <div>
+          <strong class="font-amiri" style="font-size: 1.15rem; color: #fff;">لوحة تحكم الموقع</strong>
+          <span style="font-size: 0.75rem; color: #fbcfe8; display: block;">تخصيص البيانات والرسائل</span>
+        </div>
+      </div>
+
+      <div>
+        <a href="index.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;">
+          ← العودة للموقع الرئيسي
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+    <!-- شاشة إدخال الرمز السري -->
+    <div id="admin-login-section" class="glass-panel admin-card" style="max-width: 480px; text-align: center;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+      <h2 class="font-amiri text-gold" style="font-size: 1.8rem; margin-bottom: 0.5rem;">
+        أدخل الرمز السري للوحة التحكم
+      </h2>
+      <p style="font-size: 0.85rem; color: #fbcfe8; margin-bottom: 1.5rem;">
+        الرمز السري الافتراضي للدخول هو: <code style="background: rgba(0,0,0,0.5); padding: 0.2rem 0.5rem; border-radius: 4px; color: #fbbf24;">1234</code>
+      </p>
+
+      <form id="admin-pin-form">
+        <div class="form-group">
+          <input type="password" id="admin-pin-input" class="form-control" placeholder="أدخل الرمز السري هنا..." style="text-align: center; font-size: 1.2rem; letter-spacing: 0.2rem;" autofocus required>
+          <div id="admin-pin-error" style="color: #f87171; font-size: 0.8rem; margin-top: 0.5rem;"></div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+          دخول إلى لوحة التحكم
+        </button>
+      </form>
+    </div>
+
+    <!-- شاشة لوحة التحكم بعد التحقق -->
+    <div id="admin-dashboard-section" class="glass-panel admin-card" style="display: none;">
+      <!-- تنبيه هام حول التخزين المحلي -->
+      <div style="background: rgba(251, 191, 36, 0.15); border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 1rem; padding: 1rem 1.25rem; margin-bottom: 2rem; color: #fef08a; font-size: 0.85rem; line-height: 1.7;">
+        <strong>📌 توضيح هام:</strong> التعديلات التي تقوم بحفظها هنا تُخزَّن داخل متصفحك الحالي عبر تقنية <code style="background: rgba(0,0,0,0.3); padding: 0.1rem 0.4rem; border-radius: 4px;">localStorage</code>. هذا يعني أنها ستظهر مباشرة عند تصفحك لهذا الجهاز، ولكنها لن تنتقل تلقائيًا لأجهزة الزوار الآخرين دون تعديل ملفات الكود في المستودع. الموقع مصمم ليعمل بدون خادم ثابت.
+      </div>
+
+      <div style="border-bottom: 1px solid rgba(244, 114, 182, 0.25); padding-bottom: 1rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <h2 class="font-amiri text-gold" style="font-size: 1.8rem;">تعديل محتويات الموقع</h2>
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="reset-settings-btn" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">استعادة الافتراضي</button>
+          <button id="save-settings-btn" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.4rem 1.2rem;">💾 حفظ التعديلات</button>
+        </div>
+      </div>
+
+      <!-- إشعار نجاح الحفظ -->
+      <div id="save-toast-msg" style="display: none; background: rgba(34, 197, 94, 0.25); border: 1px solid rgba(34, 197, 94, 0.6); border-radius: 0.75rem; padding: 0.75rem 1rem; margin-bottom: 1.5rem; color: #86efac; font-size: 0.85rem; text-align: center;">
+        ✨ تم حفظ جميع التعديلات بنجاح في متصفحك الحالي!
+      </div>
+
+      <!-- نماذج التعديل -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+        <div class="form-group">
+          <label for="field-girl-name">اسم صاحبة العيد:</label>
+          <input type="text" id="field-girl-name" class="form-control" value="إيمان">
+        </div>
+
+        <div class="form-group">
+          <label for="field-nickname">اللقب الرومانسي:</label>
+          <input type="text" id="field-nickname" class="form-control" value="حبيبة القلب ونور العين">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="field-birthday-date">تاريخ ووقت عيد الميلاد (للعداد التنازلي):</label>
+        <input type="datetime-local" id="field-birthday-date" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="field-hero-title">عنوان الترحيب الرئيسي:</label>
+        <input type="text" id="field-hero-title" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="field-hero-message">رسالة الترحيب الأولى في الصفحة:</label>
+        <textarea id="field-hero-message" class="form-control" rows="3"></textarea>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid rgba(244,114,182,0.2); margin: 2rem 0;">
+
+      <h3 class="font-amiri text-gold" style="font-size: 1.4rem; margin-bottom: 1rem;">رسالة الحب الخاصة (في المظروف)</h3>
+
+      <div class="form-group">
+        <label for="field-letter-title">عنوان الرسالة:</label>
+        <input type="text" id="field-letter-title" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="field-letter-content">نص رسالة الحب الكامل:</label>
+        <textarea id="field-letter-content" class="form-control" rows="6"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="field-letter-signature">توقيع الرسالة:</label>
+        <input type="text" id="field-letter-signature" class="form-control">
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid rgba(244,114,182,0.2); margin: 2rem 0;">
+
+      <h3 class="font-amiri text-gold" style="font-size: 1.4rem; margin-bottom: 1rem;">محتوى صندوق المفاجأة والهدية</h3>
+
+      <div class="form-group">
+        <label for="field-surprise-title">عنوان المفاجأة:</label>
+        <input type="text" id="field-surprise-title" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="field-surprise-message">رسالة المفاجأة:</label>
+        <textarea id="field-surprise-message" class="form-control" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="field-surprise-poem">أبيات الشعر الرومانسية للمفاجأة:</label>
+        <textarea id="field-surprise-poem" class="form-control" rows="4"></textarea>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid rgba(244,114,182,0.2); margin: 2rem 0;">
+
+      <h3 class="font-amiri text-gold" style="font-size: 1.4rem; margin-bottom: 1rem;">إعدادات الموسيقى والرمز السري</h3>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+        <div class="form-group">
+          <label for="field-music-title">اسم المقطوعة الموسيقية:</label>
+          <input type="text" id="field-music-title" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="field-music-url">مسار أو رابط ملف MP3:</label>
+          <input type="text" id="field-music-url" class="form-control" placeholder="اتركه فارغاً لعزف البيانو التلقائي">
+        </div>
+      </div>
+
+      <div class="form-group" style="max-width: 320px;">
+        <label for="field-admin-pin">تغيير الرمز السري للوحة التحكم (PIN):</label>
+        <input type="password" id="field-admin-pin" class="form-control" style="font-family: monospace; letter-spacing: 0.15rem;">
+      </div>
+
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <button id="save-settings-btn-bottom" onclick="document.getElementById('save-settings-btn').click()" class="btn btn-primary" style="padding: 0.8rem 2.5rem; font-size: 1rem;">
+          💾 حفظ جميع التعديلات في المتصفح
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
